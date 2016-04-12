@@ -27,11 +27,57 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-        <script src="semantic/dist/semantic.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+        <script src="../semantic/dist/semantic.min.js">
+        </script>
         <title>Turismo La Paz</title>
     </head>
     <body>
+    <i class="home icon"></i>
+    <div class="code">
+
+        // initialize all modals
+        $('.coupled.modal')
+        .modal({
+        allowMultiple: true
+        })
+        ;
+        // open second modal on first modal buttons
+        $('.second.modal')
+        .modal('attach events', '.first.modal .button')
+        ;
+        // show first immediately
+        $('.first.modal')
+        .modal('show')
+        ;
+
+    </div>
+    <div class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Profile Picture
+        </div>
+        <div class="image content">
+            <div class="ui medium image">
+                <img src="/images/avatar/large/chris.jpg">
+            </div>
+            <div class="description">
+                <div class="ui header">We've auto-chosen a profile image for you.</div>
+                <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+                <p>Is it okay to use this photo?</p>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+                Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+                Yep, that's me
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="ui primary test button">Launch modal</div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
