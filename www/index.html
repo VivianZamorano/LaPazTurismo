@@ -1,88 +1,144 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
-        <script src="../semantic/dist/semantic.min.js">
-        </script>
-        <title>Turismo La Paz</title>
-    </head>
-    <body>
-    <i class="home icon"></i>
-    <div class="code">
-
-        // initialize all modals
-        $('.coupled.modal')
-        .modal({
-        allowMultiple: true
-        })
-        ;
-        // open second modal on first modal buttons
-        $('.second.modal')
-        .modal('attach events', '.first.modal .button')
-        ;
-        // show first immediately
-        $('.first.modal')
-        .modal('show')
-        ;
-
-    </div>
-    <div class="ui modal">
-        <i class="close icon"></i>
-        <div class="header">
-            Profile Picture
-        </div>
-        <div class="image content">
-            <div class="ui medium image">
-                <img src="/images/avatar/large/chris.jpg">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script src="../semantic/dist/semantic.min.js">
+    </script>
+    <title>Turismo La Paz</title>
+</head>
+<body>
+<div class="ui fixed inverted menu">
+<div class="ui container">
+    <div class="ui simple dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item" href="#">Link Item</a>
+            <a class="item" href="#">Link Item</a>
+            <div class="divider"></div>
+            <div class="header">Header Item</div>
+            <div class="item">
+                <i class="dropdown icon"></i>
+                Sub Menu
+                <div class="menu">
+                    <a class="item" href="#">Link Item</a>
+                    <a class="item" href="#">Link Item</a>
+                </div>
             </div>
-            <div class="description">
-                <div class="ui header">We've auto-chosen a profile image for you.</div>
-                <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-                <p>Is it okay to use this photo?</p>
-            </div>
-        </div>
-        <div class="actions">
-            <div class="ui black deny button">
-                Nope
-            </div>
-            <div class="ui positive right labeled icon button">
-                Yep, that's me
-                <i class="checkmark icon"></i>
-            </div>
+            <a class="item" href="#">Link Item</a>
         </div>
     </div>
-    <div class="ui primary test button">Launch uiomodal</div>
+</div>
+</div>
+<div class="main text container">
+<div class="ui column grid">
+    <div class="row">
+        <div class="column center aligned">
+            <h1 class="ui dividing header">Turistic App<br>La Paz</h1>
+        </div>
+    </div>
+</div>
+<div class="ui two column grid">
+    <div class="row">
+        <div class="column center aligned">
+            <h3 class="ui icon header">
+                <i class="inverted red huge circular marker icon"></i>
+                <div class="content">
+                    Mapas
+                    <div class="sub header">
+                        Ver las locaciones
+                    </div>
+                </div>
+            </h3>
+        </div>
+        <div class="column center aligned">
+            <h3 class="ui icon header">
+                <i class="circular huge unhide icon"></i>
+                <div class="content">
+                    Realidad Aumentada
+                    <div class="sub header">
+                       Ver en RA
+                    </div>
+                </div>
+            </h3>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+        </div>
+    </div>
+    <div class="column center aligned">
+        <h3 class="ui icon header">
+            <i class="inverted blue circular huge photo icon"></i>
+            <div class="content">
+                Galeria de Fotos
+                <div class="sub header">
+                    Ver Galeria
+                </div>
+            </div>
+        </h3>
+
+    </div>
+    <div class="column center aligned">
+        <h3 class="ui icon header">
+            <i class="inverted yellow circular huge info icon"></i>
+            <div class="content">
+                Configuracion
+                <div class="sub header">
+                    Configurar App
+                </div>
+            </div>
+        </h3>
+
+    </div>
+</div>
+</div>
+<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui stackable inverted divided grid">
+            <div class="three wide column">
+                <h4 class="ui inverted header">Group 1</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Link One</a>
+                    <a href="#" class="item">Link Two</a>
+                    <a href="#" class="item">Link Three</a>
+                    <a href="#" class="item">Link Four</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Group 2</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Link One</a>
+                    <a href="#" class="item">Link Two</a>
+                    <a href="#" class="item">Link Three</a>
+                    <a href="#" class="item">Link Four</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Group 3</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Link One</a>
+                    <a href="#" class="item">Link Two</a>
+                    <a href="#" class="item">Link Three</a>
+                    <a href="#" class="item">Link Four</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">Footer Header</h4>
+                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <img src="assets/images/logo.png" class="ui centered mini image">
+        <div class="ui horizontal inverted small divided link list">
+            <a class="item" href="#">Site Map</a>
+            <a class="item" href="#">Contact Us</a>
+            <a class="item" href="#">Terms and Conditions</a>
+            <a class="item" href="#">Privacy Policy</a>
+        </div>
+    </div>
+</div>
+</body>
 </html>
