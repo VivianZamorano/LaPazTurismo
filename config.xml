@@ -62,6 +62,9 @@
   <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   <access origin="*"/>
+  <access origin="*.google.com" />
+  <access origin="*.googleapis.com" />
+  <access origin="*.gstatic.com" />
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
@@ -69,8 +72,21 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
+  <access origin="*"/>
+  <access origin="*.google.com" />
+  <access origin="*.googleapis.com" />
+  <access origin="*.gstatic.com" />
+  <access origin="*.turismolapaz.esy.es" />
+  <access origin="*.192.168.1.110" />
   <platform name="android">
     <allow-intent href="market:*"/>
+    <access origin="http://*" />
+    <access origin="https://*" />
+    <access origin="*.google.com" />
+    <access origin="*.googleapis.com" />
+    <access origin="*.gstatic.com" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>

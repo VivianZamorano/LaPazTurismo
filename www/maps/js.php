@@ -8,7 +8,7 @@
     var localizaciones = [];
     $.ajax({
         type: "GET",
-        url: "../config/maps.class.php?metodo=Locacion&IdLocacion=1",
+        url: "http://turismolapaz.esy.es/config/maps.class.php?metodo=Locacion&IdLocacion=1",
         async: true,
 
         success: function (datos) {
@@ -23,7 +23,7 @@
     });
     $.ajax({
         type: "GET",
-        url: "../config/maps.class.php?metodo=PtsIntrs&IdLocacion=1",
+        url: "http://turismolapaz.esy.es/config/maps.class.php?metodo=PtsIntrs&IdLocacion=1",
         async: true,
         success: function (datos) {
             var dataJson = eval(datos);
@@ -65,13 +65,13 @@
         // Origins, anchor positions and coordinates of the marker increase in the X
         // direction to the right and in the Y direction down.
         var image = {
-            //url: 'http://simpleicon.com/wp-content/uploads/map-marker-5.png',
+            url: '../img/marker.png',
             // This marker is 20 pixels wide by 32 pixels high.
-            size: new google.maps.Size(20, 32),
+            size: new google.maps.Size(37, 37),
             // The origin for this image is (0, 0).
             origin: new google.maps.Point(0, 0),
             // The anchor for this image is the base of the flagpole at (0, 32).
-            anchor: new google.maps.Point(0, 32)
+            anchor: new google.maps.Point(18, 37)
         };
         // Shapes define the clickable region of the icon. The type defines an HTML
         // <area> element 'poly' which traces out a polygon as a series of X,Y points.
